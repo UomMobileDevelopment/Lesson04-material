@@ -119,3 +119,10 @@ public class DetailActivity extends ActionBarActivity {
 </RelativeLayout>
 
     ```
+
+Settings Activity
+
+https://gist.github.com/udacityandroid/41aca2eb9ff6942e769b
+
+update Adndroid Manifest to declare Settings Activity
+
