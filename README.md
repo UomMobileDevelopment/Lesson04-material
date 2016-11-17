@@ -1,6 +1,11 @@
 # Lesson04-material
 
-Προσθήκη Toast όταν πατιέται ένα list item
+Στο μάθημα αυτό θα προσθέσουμε μια δεύτερη οθόνη (Activity) η οποία θα εμφανίζεται όταν πατάμε πάνω σε μια ημέρα πρόβλεψης της λίστας έτσι ώστε να παρουσιάζεται αναλυτική η πρόβλεψη για τη συγκεκριμένη ημέρα. 
+
+###### Προσθήκη Toast όταν πατιέται ένα list item
+
+Θα ξεκινήσουμε προσθέτοντας ένα προσωρινό [Toast (φανταστείτε το σαν Popup message box)](https://developer.android.com/guide/topics/ui/notifiers/toasts.html) για να εμφανίζεται όταν πατάμε σε κάποια ημέρα της λίστας. Θα χρειατούμε επίσης έναν ```ItemClickListener```.  
+Οπως θα δείτε, τον κατασκευάζουμε ανώνυμα για απλοποίηση του κώδικα. Έτσι, με την προσωρινή λύση του Toast, θα επιβεβαιώσουμε τη σωστή λειτουργία του listener.
 
 ```
  listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
@@ -16,7 +21,8 @@
 
 ```
 
-φτιάχνουμε ένα νέο DetailActivity με Hierarchical Parent το MainActivity
+Ας περάσουμε στη δημιουργία της οθόνης (Activity) που θα εμφανίζεται με το πάτημα κάποιας ημέρας της λίστας. 
+Φτιάχνουμε ένα νέο DetailActivity
 
 ```
 package com.example.android.sunshine.app;
@@ -96,7 +102,8 @@ public class DetailActivity extends ActionBarActivity {
 }
 ```
 
-Και το fragment_detail.xml:
+Και το fragment_detail.xml, παρατηρήστε πως Hierarchical Parent είναι το MainActivity
+
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -118,12 +125,13 @@ public class DetailActivity extends ActionBarActivity {
 
 </RelativeLayout>
 
-    ```
+```
+
+##### Intents
+
+Τα Intents είναι ο βασικότερος τρόπος επικοινωνίας μεταξύ των Activities στο σύστημα. Χωρίζονται σε Explicit και Implicit. 
+
+Στο σημερινό μάθημα θα δούμε μόνο τα Explicit Intents
 
 
-Settings Activity
-
-https://gist.github.com/udacityandroid/41aca2eb9ff6942e769b
-
-update Adndroid Manifest to declare Settings Activity
 
