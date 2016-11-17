@@ -120,6 +120,7 @@ public class DetailActivity extends ActionBarActivity {
 
     ```
 
+
 Settings Activity
 
 https://gist.github.com/udacityandroid/41aca2eb9ff6942e769b
