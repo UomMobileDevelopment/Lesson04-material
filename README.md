@@ -131,6 +131,21 @@ public class DetailActivity extends ActionBarActivity {
 
 ```
 
+## Σημαντικό!
+
+Δεν ξεχνώ να προσθέσω το νέο activity στο AndroidManifest.xml
+
+```
+        <activity
+            android:name=".DetailActivity"
+            android:label="@string/title_activity_detail"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.sunshine.app.MainActivity" />
+        </activity>
+```
+
 ##### Intents
 
 Τα Intents είναι ο βασικότερος τρόπος επικοινωνίας μεταξύ των Activities στο σύστημα. Χωρίζονται σε Explicit και Implicit. 
